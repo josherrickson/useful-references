@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Useful References</title>
+    <link rel="stylesheet" href="https://errickson.net/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="toc.js"></script>
+  </head>
+  <body class="index">
+    <h1 class="centered">Useful References</h1>
+    <br />
+    <div class="centered">
+      <input type="text" id="filterInput" placeholder="Type to filter..." />
+      <button id="resetButton">Reset</button>
+    </div>
+    <ul id="content">
+
+      <li class="index_li">
+        <p class="citation">Benjamin, Daniel J., et al. "Redefine statistical
+        significance." Nature human behaviour 2.1 (2018): 6-10.</p>
+
+        <p>Suggest using .005 instead of .05 for significance in exploratory
+        analysis.</p>
+
+        <p>Suggesting calling .005 < p < .05 as "suggestive".</p>
+
+        <p>Part of the rational: P(H1|X)/P(H0|X) is prior odds or bayes factor.
+        .05 corresponds to prior odds around 2.5-3.5. .005 corresponds instead
+        of around 14-25.</p>
+      </li>
+      <li class="index_li">
+        <p>Eypasch_EtAl_1995_Probability_of_adverse_events_that_have_not_yet_occurred.txt</p>
+
+        Rule of three citation
+      </li>
+      <li class="index_li">
+        <p>Fang_2011_Asymptotic_Equivalence_between_Cross-Validations_and_Akaike_Information_Criteria_in_Mixed-Effects_Models.txt</p>
+
+        Shows that LOOCV is asymptotically equivalent to AIC when used to choose between mixed effects models.
+      </li>
+      <li class="index_li">
+        <p>Gelman_2000_Should_we_take_measurements_at_an_intermediate_design_point.txt</p>
+
+        Investigates whether collecting an intermediate data point is worth
+        doing (as opposed to collecting larger sample size at start and
+        end). Conclusion is that it is not worth collecting the intermediate
+        data point UNLESS sample size is very large AND non-linearity is
+        assumed very strong.
+      </li>
+      <li class="index_li">
+        <p>Hoenig_and_Heisey_2001_The_Abuse_of_Power.txt</p>
+
+        A summary of inappropriate uses of power analysis. Argues never to do post-hoc. Suggests CI instead of power analysis.
+      </li>
+      <li class="index_li">
+        <p>Jovanovic_and_Levy_1997_A_Look_at_the_Rule_of_Three.txt</p>
+
+        A justification for the Rule of Three. If you observe no successes in
+        n trials, what is a confidence interval for p? (If all successes,
+        define success as failure and take 1-end result.)
+
+        By Poisson distribution: Exact CI is (0, -ln(.05)/n).
+
+        By Binomial distribution: Exact CI is (0, 1 - .05^(1/n)).
+
+        Rule of Three is 3/n. Adjusted Rule of Three is 3/(n+1).
+
+        For n > 100, all roughly equivalent. For small sample sizes, 3/(n+1)
+        is slightly preferred.
+      </li>
+      <li class="index_li">
+        <p>Kennedy_2005_Oh_No!_I_Got_the_Wrong_Sign!_What_Should_I_Do.txt</p>
+
+        Lists around 40 different reasons why a "wrong sign" can be obtained,
+        and offers very brief advice on addressing it. It is published in the
+        Econ literature so is specific there, but does offer a lot of general
+        results.
+
+        Categories of examples include:
+        - Bad theory (the assumed sign is wrong, the observed sign is correct).
+        - Bad interpretation (e.g. a regression holds all else constant)
+        - Bad data
+        - Econometric issues
+        - Statistical issues (e.g. outliers, measurement error)
+      </li>
+      <li class="index_li">
+        <p>LeeEtAll_2021_Framework_for_the_treatment_and_reporting_of_missing_data_in_observational_studies.txt</p>
+
+        Excellent overview of types of missing data, whether MI is needed, and whether sensitivity analysis is needed
+      </li>
+      <li class="index_li">
+        <p>MacCallumEtAll_2015_Power_Analysis_and_Determination_of_Sample_Size_for_Covariance_Structure_Modeling.txt</p>
+
+        Sample size estimates for SEM models.
+      </li>
+      <li class="index_li">
+        <p>McNeish_and_Kelley_2019_Fixed_Effects_Models_Versus_Mixed_Effects_Models_for_Clustered_Data.txt</p>
+
+        Provides a discussion of what to use mixed models and when to use fixed effects models.
+
+        The big argument for fixed effects is omitted variable bias and
+        endogeneity at level 2 does not impact level 1 estimates. Also a lesser argument that
+        <30 clusters is bad for mixed model.
+
+            They also suggest a "within-between mixed model", e.g. group-mean centering predictors and also including group means as predictors. E.g. something like
+
+            y_ij = ... + beta*(x_ij - xbar_j) + alpha*xbar_j
+
+            This splits within and between completely.
+      </li>
+      <li class="index_li">
+        <p>Rhemtulla_2012_When_Can_Categorical_Variables_Be_Treated_As_Continuous.txt</p>
+
+        A simulation showing when categorical variables can be treated as
+        continuous without bias. Specifically for CFA. Conclusion:
+
+        "Our findings confirm that when observed variables have fewer than
+        five categories, robust categorical methodology is best. With five to
+        seven categories, both methods yield acceptable performance."
+      </li>
+      <li class="index_li">
+        <p>Schenker_and_Gentleman_2001_On_Judging_the_Significance_of_Differences_by_Exam.txt</p>
+
+        tldr: If two CI's don't overlap, you can reject the null that point
+        estimates are the same. If they don't overlap, you need to test the
+        hypothesis that x1 - x2 = 0.
+
+
+        If viewing two confidence intervals for two point estimates, it is a
+        common practice to see whether the confidence intervals overlap;
+        failure to overlap provides evidence that the two points differ
+        statistically.
+
+        Call this method the "overlap method" and call hypothesis testing (x1
+        - x2) = 0 as the "standard method".
+
+        If the overlap method rejects, then the standard method rejects.
+        (If the two CI's don't overlap, a hypothesis test will find a
+        significant difference.)
+
+        If the overlap method fails to reject, then the standard method may
+        reject or not reject.
+        (If the two CI's reject, we don't know what a hypothesis test will
+        do.)
+
+        Two CI's can overlap and a hypothesis test still find them
+        signficant. This is more likely when the standard error of each point
+        is simialr (e.g. the amount of overlap for which the hypothesis test
+        fails to reject is largest if the CI's are of equal width).
+
+
+        A different approach - reject if neither CI contains the other point
+        estimate - has issues the other way. No overlap here does not imply
+        significance in the hypothesis test.
+
+
+        Correlation between the point estimates makes the problem
+        worse. (Above was assuming independence.)
+      </li>
+      <li class="index_li">
+        <p>Schielzeth_2020_Robustness_of_linea_mixed-effects_models_to_violation_of_distributional_assumptions.txt</p>
+
+        Model estimates were usually robust to violations of assumptions, with the
+        exception of slight upward biases in estimates of random effect variance if the
+        generating distribution was bimodal but was modelled by Gaussian error
+        distributions. Further, estimates for (random effect) components that violated
+        distributional assumptions became less precise but remained unbiased. However,
+        this particular problem did not affect other parameters of the model.
+
+        E.g. normality is not important!
+      </li>
+      <li class="index_li">
+        <p>Schoemann_EtAl_2017_Determining_Power_and_Sample_size_for_Simple_and_Complex_Mediation_Models.txt</p>
+
+        Methodology and link to a tool to perform MCMC for power analysis of mediation model.
+
+        Link: https://schoemanna.shinyapps.io/mc_power_med/
+      </li>
+      <li class="index_li">
+        <p>Stensrud_and_Hernan_2020_Why_test_for_proportional_hazards.txt</p>
+
+        Claims:
+        - Hazards are never proportional; failure to reject PH-tests implies lack of power.
+        - Use bootstrap to properly estimate SE's (other sources suggested robust SE).
+        - "a hazard ratio from a Cox model needs to be interpreted as a weighted average of the true hazard ratios over the entire follow-up period."
+      </li>
+      <li class="index_li">
+        <p>Waite_and_Campbell_2006_Controlling_the_false_discovery_rate_and_increasin.txt</p>
+
+        Familywise error rate (FWER) - Rank p-values, reject first at .05/m,
+        reject second at .05/(m-1), third at .05/(m-2), etc.
+
+        Argument against FWER is that it increases Type II error as
+        significance depends on the number of other tests done. Also suffer
+        from reduced power.
+
+        Instead, control for false discovery rate (FDR) using
+        Benjamini-Hochberg (BH) procedure.
+
+        Bonferroni - 95% certainty there are NO false discoveries.
+
+        FDR/BH - At most 5% of signifant findings are false discoveries. (If
+        further citation needed, Benjamini & Hochberg, 1995.) If a large
+        number of tests, P(At least one false discovery) increases, but only
+        5% of those discoveries will be false.
+
+        Methodologies:
+
+        Order all p-values from low to high. Say there are m total p-values.
+
+        Bonferroni FWER: Reject lowest p-value at .05/m. Reject second lowest
+        p-value at .05/(m-1). Etc. Reject highest p-value at .05/(m-[m-1]) =
+        .05.
+
+        BH FDR: Reject lower p-value at 1*.05/m. Reject second lowest p-value
+        at 2*.05/m. Reject third lowest p-value at 3*.05/m. Etc. Reject
+        highest p-value at m*.05/m = .05.
+      </li>
+      <li class="index_li">
+        <p>von_Hippel_2018_How_Many_Imputations_Do_You_Need.txt</p>
+
+        Rebuttal of the typical "m = 5 imputations" recommendation.
+
+        The m = 5 (or as this paper puts it, 2-10) is sufficient for
+        efficienct estimation of point estimation, not for standard error of
+        point estimate. Suggests m = 200 for sample sizes where this
+        reasonable.
+
+        Introduces a two-stage procedure.
+
+        1) Perform a "pilot" MI on 5-20 imputations. Using the fraction of
+        missing information [1 - var(point estimate | complete
+        data)/var(point estimate | M imputations)], calculate how many
+        total imputations are needed.  Specifically, use a "conservative"
+        fraction of missing information, based on CI (so larger M in pilot
+        will lead to more precision in M for follow-up.)
+
+        2) Use the new M to run the imputation.
+
+        Fraction of missing information is NOT % of missing data, however, you
+        can get rough estimates. The rule of thumb I get out of this is that
+
+        For little missing information, use m = 50.
+        For moderate missing information, use m = 200.
+        For large missing information, use m = 400.
+
+
+        The quadratic rule is 200*(fraction of missing information)^2.
+
+        Implemented in Stata via `how_many_imputations`:
+
+        ```
+        webuse mheart1s0, clear
+        mi impute regress bmi attack smokes age female hsgrad, replace add(10)
+        mi estimate: logit attack bmi smokes age female hsgrad
+        how_many_imputations, cv_se(.01)
+        mi impute regress bmi attack smokes age female hsgrad, add(`r(add_M)')
+        mi estimate: logit attack bmi smokes age female hsgrad
+        ```
+
+      </li>    </ul>
+
+    <p style="text-align: center">
+      <a href="https://errickson.net">Home</a>
+    </p>
+
+    <script src="index_filter.js"></script>
+  </body>
+</html>

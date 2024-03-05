@@ -1,0 +1,29 @@
+/**********************************************************************
+Overwrite site style
+**********************************************************************/
+
+body {
+    max-width: 90%;
+}
+
+.centered {
+    width: 50%; /* Adjust the width as needed */
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+/**********************************************************************
+Index search
+**********************************************************************/
+
+.highlight {
+    background-color: yellow;
+}
+
+@media (prefers-color-scheme: dark) {
+    .highlight {
+        color: var(--base02)
+    }
+}
