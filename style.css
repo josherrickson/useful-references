@@ -3,7 +3,7 @@ Overwrite site style
 **********************************************************************/
 
 body {
-    max-width: 90%;
+    max-width: 80%;
 }
 
 .centered {
@@ -11,6 +11,7 @@ body {
     text-align: center;
     margin: 0 auto;
 }
+
 
 
 
@@ -26,4 +27,47 @@ Index search
     .highlight {
         color: var(--base02)
     }
+}
+
+/**********************************************************************
+List items
+**********************************************************************/
+
+ul.citation_list {
+    list-style-type: none;
+}
+
+li.citation_entry {
+    background-color: var(--base3);
+    padding-left: 1%;
+    padding-right: 1%;
+    border-width: 2px;
+    border-style: none;
+    line-height: 1.1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+    li.citation_entry {
+        background-color: var(--base03);
+    }
+}
+
+/* These remove the spacing between title and authors/year */
+.bib p.title {
+    margin-bottom: 0; /* Remove spacing below the title paragraph */
+    font-weight: bold;
+}
+.bib p.title_details {
+    margin-top: 0; /* Remove spacing above paragraphs except for the first one */
+    color: var(--base0);
+}
+.bib {
+    margin-bottom: 10px; /* Add spacing after the .bib div */
+}
+
+p.title {
 }

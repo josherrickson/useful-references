@@ -6,13 +6,13 @@
 const filterInput = document.getElementById('filterInput')
 
 // Get list of all topics
-const subjectList = document.querySelectorAll('.index_li')
+const citationList = document.querySelectorAll('.citation_entry')
 
 // Add an event listener to the input
 filterInput.addEventListener('input', highlightOccurrences)
 
 function highlightOccurrences() {
-  subjectList.forEach((x) => {
+  citationList.forEach((x) => {
     const toReplace = filterInput.value.trim()
 
     // First remove any existing highlighting
@@ -50,13 +50,13 @@ function filterList() {
 
   // Short-circuit if no input
   if (toReplace.length === 0) {
-    subjectList.forEach((sl) => {
+    citationList.forEach((sl) => {
       sl.style.display = ''
     })
     return
   }
 
-  subjectList.forEach((sl) => {
+  citationList.forEach((sl) => {
     // Check if the list item contains the user input, if not hide it
     const toReplaceRegex = new RegExp(`${toReplace}`, 'i')
     if (toReplaceRegex.test(sl.textContent)) {
@@ -84,7 +84,7 @@ Collapse-expand
  ***********************************************************************/
 
 // Get all expandable list items
-const expandableItems = document.querySelectorAll('.index_li');
+const expandableItems = document.querySelectorAll('.citation_entry');
 
 // Iterate over each expandable list item
 expandableItems.forEach(item => {

@@ -15,87 +15,137 @@
       <input type="text" id="filterInput" placeholder="Type to filter..." />
       <button id="resetButton">Reset</button>
     </div>
-    <ul id="content">
+    <ul class="citation_list">
 
-      <li class="index_li">
-        <p class="citation">Benjamin, Daniel J., et al. "Redefine statistical
-        significance." Nature human behaviour 2.1 (2018): 6-10.</p>
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1038/s41562-017-0189-z">Redefine
+            statistical significance.</a></p>
+          <p class="title_details">Benjamin et al., 2018</p>
+        </div>
 
-        <p>Suggest using .005 instead of .05 for significance in exploratory
-        analysis.</p>
+        <p>
+          This paper suggests using &alpha; =.005 instead of &alpha; = .05 for
+          significance in exploratory analysis. They also suggest calling .005
+          &lt; <emph>p</emph> &lt; .05 as "suggestive".
+        </p>
 
-        <p>Suggesting calling .005 < p < .05 as "suggestive".</p>
-
-        <p>Part of the rational: P(H1|X)/P(H0|X) is prior odds or bayes factor.
-        .05 corresponds to prior odds around 2.5-3.5. .005 corresponds instead
-        of around 14-25.</p>
+        <p>
+          The paper uses a Bayesian approach, arguing that &alpha; = .005
+          corresponds to a Bayes Factor of 14 to 26, which translates (according
+          to <a href="https://doi.org/10.1080/01621459.1995.10476572">Kass &
+          Rafferty (1993)</a>) to "substantial" to "strong" evidence.
+          </p>
       </li>
-      <li class="index_li">
-        <p>Eypasch_EtAl_1995_Probability_of_adverse_events_that_have_not_yet_occurred.txt</p>
 
-        Rule of three citation
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1136/bmj.311.7005.619">Probability
+          of adverse events that have not yet occurred: a statistical reminder</a></p>
+          <p class="title_details">Eypasch et al., 1995</p>
+        </div>
+
+        <p>
+          A very quick discussion about the
+          <a href="https://en.wikipedia.org/wiki/Rule_of_three_(statistics)">rule
+            of three</a>, establishing estimation of a confidence interval in
+          scenarios where the prevalance of a rare event is 0.
+        </p>
+
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1080/00031305.1997.10473947">A
+            Look at the Rule of Three</a></p>
+          <p class="title_details">Jovanovic & Levy, 19957</p>
+        </div>
+
+        <p>
+          A more in-depth explanation, including derivations of the rule and a
+          discussion of a correction for small sample sizes (n &lt; 100).
+        </p>
       </li>
-      <li class="index_li">
-        <p>Fang_2011_Asymptotic_Equivalence_between_Cross-Validations_and_Akaike_Information_Criteria_in_Mixed-Effects_Models.txt</p>
 
-        Shows that LOOCV is asymptotically equivalent to AIC when used to choose between mixed effects models.
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.6339/JDS.201101_09%281%29.0002">Asymptotic
+            Equivalence between Cross-Validations and Akaike Information
+            Criteria in Mixed-Effects Models</a></p>
+          <p class="title_details">Fang, 2011</p>
+        </div>
+
+        <p>
+          Shows that leave-one-out cross validation (LOOCV) is asymptotically
+          equivalent to AIC when used with mixed effects regression models.
+        </p>
       </li>
-      <li class="index_li">
-        <p>Gelman_2000_Should_we_take_measurements_at_an_intermediate_design_point.txt</p>
 
-        Investigates whether collecting an intermediate data point is worth
-        doing (as opposed to collecting larger sample size at start and
-        end). Conclusion is that it is not worth collecting the intermediate
-        data point UNLESS sample size is very large AND non-linearity is
-        assumed very strong.
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1093/biostatistics/1.1.27">Should We Take Measurements at an Intermediate Design Point?</a></p>
+          <p class="title_details">Gelman, 2000</p>
+        </div>
+
+        <p>
+          When collecting longitudinal data, is it worth collecting intermediate
+          data points, versus collecting alarger sample size with only two time
+          points. The conclusion is that it is not worth collecting the
+          intermediate data point unless the sample size is very large and
+          non-linearity is strongly assumed.
+          </p>
       </li>
-      <li class="index_li">
-        <p>Hoenig_and_Heisey_2001_The_Abuse_of_Power.txt</p>
 
-        A summary of inappropriate uses of power analysis. Argues never to do post-hoc. Suggests CI instead of power analysis.
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1198/000313001300339897">The
+            Abuse of Power: The Pervasive Fallacy of Power Calculations for Data
+            Analysis</a></p>
+          <p class="title_details">Hoenig & Heisey, 2012</p>
+        </div>
+
+        <p>
+          A discussion of the inappropriate use of post-hoc power analysis. They
+          argue to never to do post-hoc power analyses, and suggest reporting
+          confidence intervals instead of the power analysis as a method to
+          describe the uncertainty and strength of evidence.
+        </p>
       </li>
-      <li class="index_li">
-        <p>Jovanovic_and_Levy_1997_A_Look_at_the_Rule_of_Three.txt</p>
 
-        A justification for the Rule of Three. If you observe no successes in
-        n trials, what is a confidence interval for p? (If all successes,
-        define success as failure and take 1-end result.)
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.3200/JECE.36.1.77-92">Oh
+          No! I Got the Wrong Sign! What Should I Do?</a></p>
+          <p class="title_details">Kennedy, 2010</p>
+        </div>
 
-        By Poisson distribution: Exact CI is (0, -ln(.05)/n).
+        <p>
+          Lists around 40 different reasons why a "wrong sign" can be obtained,
+          and offers very brief advice on addressing it. It is published in the
+          Econ literature so is specific there, but a lot of entries on the list
+          are more generic.
+        </p>
 
-        By Binomial distribution: Exact CI is (0, 1 - .05^(1/n)).
+        <p>
+          Categories of examples include:
+        </p>
+          <ul style="list-style-type: disc">
+            <li>Bad theory (e.g. the assumed sign is wrong, the observed sign is correct)</li>
+            <li>Bad interpretation (e.g. ignoring interaction terms)</li>
+            <li>Bad data</li>
+            <li>Statistical issues (e.g. outliers, measurement error)</li>
+          </ul>
 
-        Rule of Three is 3/n. Adjusted Rule of Three is 3/(n+1).
-
-        For n > 100, all roughly equivalent. For small sample sizes, 3/(n+1)
-        is slightly preferred.
       </li>
-      <li class="index_li">
-        <p>Kennedy_2005_Oh_No!_I_Got_the_Wrong_Sign!_What_Should_I_Do.txt</p>
 
-        Lists around 40 different reasons why a "wrong sign" can be obtained,
-        and offers very brief advice on addressing it. It is published in the
-        Econ literature so is specific there, but does offer a lot of general
-        results.
-
-        Categories of examples include:
-        - Bad theory (the assumed sign is wrong, the observed sign is correct).
-        - Bad interpretation (e.g. a regression holds all else constant)
-        - Bad data
-        - Econometric issues
-        - Statistical issues (e.g. outliers, measurement error)
-      </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>LeeEtAll_2021_Framework_for_the_treatment_and_reporting_of_missing_data_in_observational_studies.txt</p>
 
         Excellent overview of types of missing data, whether MI is needed, and whether sensitivity analysis is needed
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>MacCallumEtAll_2015_Power_Analysis_and_Determination_of_Sample_Size_for_Covariance_Structure_Modeling.txt</p>
 
         Sample size estimates for SEM models.
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>McNeish_and_Kelley_2019_Fixed_Effects_Models_Versus_Mixed_Effects_Models_for_Clustered_Data.txt</p>
 
         Provides a discussion of what to use mixed models and when to use fixed effects models.
@@ -110,7 +160,7 @@
 
             This splits within and between completely.
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>Rhemtulla_2012_When_Can_Categorical_Variables_Be_Treated_As_Continuous.txt</p>
 
         A simulation showing when categorical variables can be treated as
@@ -120,7 +170,7 @@
         five categories, robust categorical methodology is best. With five to
         seven categories, both methods yield acceptable performance."
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>Schenker_and_Gentleman_2001_On_Judging_the_Significance_of_Differences_by_Exam.txt</p>
 
         tldr: If two CI's don't overlap, you can reject the null that point
@@ -159,7 +209,7 @@
         Correlation between the point estimates makes the problem
         worse. (Above was assuming independence.)
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>Schielzeth_2020_Robustness_of_linea_mixed-effects_models_to_violation_of_distributional_assumptions.txt</p>
 
         Model estimates were usually robust to violations of assumptions, with the
@@ -171,14 +221,14 @@
 
         E.g. normality is not important!
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>Schoemann_EtAl_2017_Determining_Power_and_Sample_size_for_Simple_and_Complex_Mediation_Models.txt</p>
 
         Methodology and link to a tool to perform MCMC for power analysis of mediation model.
 
         Link: https://schoemanna.shinyapps.io/mc_power_med/
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>Stensrud_and_Hernan_2020_Why_test_for_proportional_hazards.txt</p>
 
         Claims:
@@ -186,7 +236,7 @@
         - Use bootstrap to properly estimate SE's (other sources suggested robust SE).
         - "a hazard ratio from a Cox model needs to be interpreted as a weighted average of the true hazard ratios over the entire follow-up period."
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>Waite_and_Campbell_2006_Controlling_the_false_discovery_rate_and_increasin.txt</p>
 
         Familywise error rate (FWER) - Rank p-values, reject first at .05/m,
@@ -218,7 +268,7 @@
         at 2*.05/m. Reject third lowest p-value at 3*.05/m. Etc. Reject
         highest p-value at m*.05/m = .05.
       </li>
-      <li class="index_li">
+      <li class="citation_entry">
         <p>von_Hippel_2018_How_Many_Imputations_Do_You_Need.txt</p>
 
         Rebuttal of the typical "m = 5 imputations" recommendation.
