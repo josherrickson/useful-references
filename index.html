@@ -41,7 +41,7 @@
       <li class="citation_entry">
         <div class="bib">
           <p class="title"><a href="https://doi.org/10.1136/bmj.311.7005.619">Probability
-          of adverse events that have not yet occurred: a statistical reminder</a></p>
+          of Adverse Events That Have Not Yet Occurred: A Statistical Reminder</a></p>
           <p class="title_details">Eypasch et al., 1995</p>
         </div>
 
@@ -127,7 +127,8 @@
           Categories of examples include:
         </p>
           <ul style="list-style-type: disc">
-            <li>Bad theory (e.g. the assumed sign is wrong, the observed sign is correct)</li>
+            <li>Bad theory (e.g. the assumed sign is wrong, the observed sign is
+              correct)</li>
             <li>Bad interpretation (e.g. ignoring interaction terms)</li>
             <li>Bad data</li>
             <li>Statistical issues (e.g. outliers, measurement error)</li>
@@ -136,186 +137,231 @@
       </li>
 
       <li class="citation_entry">
-        <p>LeeEtAll_2021_Framework_for_the_treatment_and_reporting_of_missing_data_in_observational_studies.txt</p>
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1016/j.jclinepi.2021.01.008">Framework
+          for the Treatment and Reporting of Missing Data in Observational
+          Studies: The Treatment and Reporting of Missing Data in Observational
+          Studies Framework</a></p>
+          <p class="title_details">Lee et al., 2021</p>
+        </div>
 
-        Excellent overview of types of missing data, whether MI is needed, and whether sensitivity analysis is needed
+        <p>
+          An excellent overview of the types of missing data (missing at random,
+          not random, completely at random) and whether multiple imputation (MI)
+          is needed or whether complete-case analysis is sufficient.
+        </p>
+
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1016/j.jclinepi.2019.02.016">The
+          Proportion of Missing Data Should Not Be Used to Guide Decisions on
+          Multiple Imputation</a></p>
+          <p class="title_details">Madley-Dowd et al., 2019</p>
+        </div>
+
+        <p>
+          Shows that in situations with large proportion of missing data (up to
+          90%), there is still a benefit to carrying out MI. The paper also
+          discusses the advice to simply do complete-case analysis if doing so
+          will lead to under 5% of observations lost to missing data.
+          </p>
       </li>
-      <li class="citation_entry">
-        <p>MacCallumEtAll_2015_Power_Analysis_and_Determination_of_Sample_Size_for_Covariance_Structure_Modeling.txt</p>
 
-        Sample size estimates for SEM models.
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://psycnet.apa.org/doi/10.1037/1082-989X.1.2.130">Power
+          Analysis and Determination of Sample Size for Covariance Structure
+          Modeling</a></p>
+          <p class="title_details">MacCallum et al., 1996</p>
+        </div>
+
+        <p>
+          Provides a way to estimate the sample size needed for various
+          Structure Equation Models (SEM)/Path Analyses. The results are based
+          upon the degrees of freedom of the model and the theorized effect
+          size. Table 4 is particularly useful.
+        </p>
+
+        <p>
+          (Wanted: A good citation explaining how to estimate DF in an SEM, with
+          visual examples!)
+          </p>
       </li>
+
       <li class="citation_entry">
-        <p>McNeish_and_Kelley_2019_Fixed_Effects_Models_Versus_Mixed_Effects_Models_for_Clustered_Data.txt</p>
+        <div class="bib">
+          <p class="title"><a href="https://psycnet.apa.org/doi/10.1037/met0000182">Fixed
+          Effects Models Versus Mixed Effects Models for Clustered Data:
+          Reviewing the Approaches, Disentangling the Differences, and Making
+          Recommendations.</a></p>
+          <p class="title_details"></p>
+        </div>
 
-        Provides a discussion of what to use mixed models and when to use fixed effects models.
+        <p>
+          A discussion of when to use fixed effects regression models, versus
+          when to use mixed effects regression models (also called "random
+          effects regression models" in Econometrics).
+        </p>
 
-        The big argument for fixed effects is omitted variable bias and
-        endogeneity at level 2 does not impact level 1 estimates. Also a lesser argument that
-        <30 clusters is bad for mixed model.
+        <p>
+          Their primary argument for fixed effects is omitted variable bias and
+          endogeneity at level 2 (group) does not impact level 1 (individual)
+          estimates. A secondary argument is that mixed effects models require
+          at least 30 groups. (Here's an <a href="https://stats.stackexchange.com/questions/37647/what-is-the-minimum-recommended-number-of-groups-for-a-random-effects-factor">online
+          discussion arguing for lower thresholds</a> with several different
+          citations).
+        </p>
 
-            They also suggest a "within-between mixed model", e.g. group-mean centering predictors and also including group means as predictors. E.g. something like
-
-            y_ij = ... + beta*(x_ij - xbar_j) + alpha*xbar_j
-
-            This splits within and between completely.
+        <p>
+          The paper also suggests another alternative, the "within-between mixed
+          model", e.g. group-mean centering predictors and also including group
+          means as predictors. This models splits within and between completely.
+          For example, if you have some predictor <i>X</i>, include in the model
+          both <i><span style="text-decoration: overline;">X</span><sub>i</sub></i>
+          (the group-level mean) and <i>X<sub>ij</sub> -
+          <span style="text-decoration: overline;">X</span><sub>i</sub></i> (the
+          variable, group-mean centered).
       </li>
+
       <li class="citation_entry">
-        <p>Rhemtulla_2012_When_Can_Categorical_Variables_Be_Treated_As_Continuous.txt</p>
+        <div class="bib">
+          <p class="title"><a href="https://psycnet.apa.org/doi/10.1037/a0029315">When
+          Can Categorical Variables Be Treated as Continuous? A Comparison of
+          Robust Continuous and Categorical SEM Estimation Methods Under
+          Suboptimal Conditions</a></p>
+          <p class="title_details">Rhemtulla et al., 2012</p>
+        </div>
 
-        A simulation showing when categorical variables can be treated as
-        continuous without bias. Specifically for CFA. Conclusion:
+        <p>
+          A simulation showing when categorical variables can be treated as
+          continuous without bias, specifically for confirmatory factor analysis
+          (CFA). Their conclusion:
+        </p>
 
-        "Our findings confirm that when observed variables have fewer than
-        five categories, robust categorical methodology is best. With five to
-        seven categories, both methods yield acceptable performance."
+        <blockquote>
+          <div>
+            Our findings confirm that when observed variables have fewer than
+            five categories, robust categorical methodology is best. With five
+            to seven categories, both methods yield acceptable performance.
+          </div>
+        </blockquote>
       </li>
+
       <li class="citation_entry">
-        <p>Schenker_and_Gentleman_2001_On_Judging_the_Significance_of_Differences_by_Exam.txt</p>
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1198/000313001317097960">On
+          Judging the Significance of Differences by Examining the Overlap
+          Between Confidence Intervals</a></p>
+          <p class="title_details">Schenker & Gentleman, 2001</p>
+        </div>
 
-        tldr: If two CI's don't overlap, you can reject the null that point
-        estimates are the same. If they don't overlap, you need to test the
-        hypothesis that x1 - x2 = 0.
+        <p>
+          Briefly:
+          <ul style="list-style-type: disc">
+            <li>If two confidence intervals's do not overlap, you can reject
+              the null that point estimates are the same.</li>
+            <li>If they don't overlap, you cannot make any conclusion and need
+              to do a full hypothesis test.</li>
+          </ul>
+        </p>
 
+        <p>
+          Two confidence intervals overlapping and still be statistically
+          significant via a hypothesis stest is more likely when the standard
+          errors are similar.
+        </p>
 
-        If viewing two confidence intervals for two point estimates, it is a
-        common practice to see whether the confidence intervals overlap;
-        failure to overlap provides evidence that the two points differ
-        statistically.
-
-        Call this method the "overlap method" and call hypothesis testing (x1
-        - x2) = 0 as the "standard method".
-
-        If the overlap method rejects, then the standard method rejects.
-        (If the two CI's don't overlap, a hypothesis test will find a
-        significant difference.)
-
-        If the overlap method fails to reject, then the standard method may
-        reject or not reject.
-        (If the two CI's reject, we don't know what a hypothesis test will
-        do.)
-
-        Two CI's can overlap and a hypothesis test still find them
-        signficant. This is more likely when the standard error of each point
-        is simialr (e.g. the amount of overlap for which the hypothesis test
-        fails to reject is largest if the CI's are of equal width).
-
-
-        A different approach - reject if neither CI contains the other point
-        estimate - has issues the other way. No overlap here does not imply
-        significance in the hypothesis test.
-
-
-        Correlation between the point estimates makes the problem
-        worse. (Above was assuming independence.)
       </li>
+
       <li class="citation_entry">
-        <p>Schielzeth_2020_Robustness_of_linea_mixed-effects_models_to_violation_of_distributional_assumptions.txt</p>
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1111/2041-210X.13434">Robustness
+          of Linear Mixed-Effects Models to Violations of Distributional
+          Assumptions</a></p>
+          <p class="title_details">Schielzeth et al., 2020</p>
+        </div>
 
-        Model estimates were usually robust to violations of assumptions, with the
-        exception of slight upward biases in estimates of random effect variance if the
-        generating distribution was bimodal but was modelled by Gaussian error
-        distributions. Further, estimates for (random effect) components that violated
-        distributional assumptions became less precise but remained unbiased. However,
-        this particular problem did not affect other parameters of the model.
+        <p>
+          Model estimates were usually robust to violations of assumptions, with
+          the exception of slight upward biases in estimates of random effect
+          variance if the generating distribution was bimodal but was modelled
+          by normal error distributions. Further, estimates for random effect
+          components that violated distributional assumptions became less
+          precise but remained unbiased. However, this particular problem did
+          not affect other parameters of the model.
+        </p>
 
-        E.g. normality is not important!
+        <p>
+          In other words, normality is not that important!
+        </p>
       </li>
+
       <li class="citation_entry">
-        <p>Schoemann_EtAl_2017_Determining_Power_and_Sample_size_for_Simple_and_Complex_Mediation_Models.txt</p>
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1177/1948550617715068">Determining
+          Power and Sample Size for Simple and Complex Mediation Models</a></p>
+          <p class="title_details">Schoemann et al., 2017</p>
+        </div>
 
-        Methodology and link to a tool to perform MCMC for power analysis of mediation model.
-
-        Link: https://schoemanna.shinyapps.io/mc_power_med/
+        <p>
+          A method for performing Monte Carlo Markov Chain (MCMC) estimation of
+          power analysis for mediation models. They also provide this tool:
+          <a href="https://schoemanna.shinyapps.io/mc_power_med/">https://schoemanna.shinyapps.io/mc_power_med/</a>.
+          It's a bit slow and as with any complex model power calculation,
+          requires a lot of assumptions or knowledge of the data.
       </li>
-      <li class="citation_entry">
-        <p>Stensrud_and_Hernan_2020_Why_test_for_proportional_hazards.txt</p>
 
-        Claims:
-        - Hazards are never proportional; failure to reject PH-tests implies lack of power.
-        - Use bootstrap to properly estimate SE's (other sources suggested robust SE).
-        - "a hazard ratio from a Cox model needs to be interpreted as a weighted average of the true hazard ratios over the entire follow-up period."
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1001/jama.2020.1267">Why
+          Test for Proportional Hazards?</a></p>
+          <p class="title_details">Stensrud & Hernan, 2020</p>
+        </div>
+
+        <p>
+          Three key claims:
+          <ul style="list-style-type: disc">
+            <li>Hazards are never proportional; failure to reject proportional
+              hazard tests implies a lack of power instead.</li>
+            <li>Use bootstrap to properly estimate standard errors's (other
+              sources suggested robust standard errors instead).</li>
+            <li><blockquote>"a hazard ratio from a Cox model needs to be
+              interpreted as a weighted average of the true hazard ratios over
+              the entire follow-up period."</blockquote></li>
+          </ul>
+        </p>
       </li>
+
       <li class="citation_entry">
-        <p>Waite_and_Campbell_2006_Controlling_the_false_discovery_rate_and_increasin.txt</p>
-
-        Familywise error rate (FWER) - Rank p-values, reject first at .05/m,
-        reject second at .05/(m-1), third at .05/(m-2), etc.
-
-        Argument against FWER is that it increases Type II error as
-        significance depends on the number of other tests done. Also suffer
-        from reduced power.
-
-        Instead, control for false discovery rate (FDR) using
-        Benjamini-Hochberg (BH) procedure.
-
-        Bonferroni - 95% certainty there are NO false discoveries.
-
-        FDR/BH - At most 5% of signifant findings are false discoveries. (If
-        further citation needed, Benjamini & Hochberg, 1995.) If a large
-        number of tests, P(At least one false discovery) increases, but only
-        5% of those discoveries will be false.
-
-        Methodologies:
-
-        Order all p-values from low to high. Say there are m total p-values.
-
-        Bonferroni FWER: Reject lowest p-value at .05/m. Reject second lowest
-        p-value at .05/(m-1). Etc. Reject highest p-value at .05/(m-[m-1]) =
-        .05.
-
-        BH FDR: Reject lower p-value at 1*.05/m. Reject second lowest p-value
-        at 2*.05/m. Reject third lowest p-value at 3*.05/m. Etc. Reject
-        highest p-value at m*.05/m = .05.
-      </li>
-      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1177/0049124117747303">How Many Imputations Do You Need? A Two-stage Calculation Using a Quadratic Rule</a></p>
+          <p class="title_details">Von Hippel, 2018</p>
+        </div>
         <p>von_Hippel_2018_How_Many_Imputations_Do_You_Need.txt</p>
 
-        Rebuttal of the typical "m = 5 imputations" recommendation.
+        <p>
+          A rebuttal of the typical "5 imputations is enough" recommendation.
+        </p>
 
-        The m = 5 (or as this paper puts it, 2-10) is sufficient for
-        efficienct estimation of point estimation, not for standard error of
-        point estimate. Suggests m = 200 for sample sizes where this
-        reasonable.
+        <p>
+          The m = 5 (or as this paper puts it, 2-10) is sufficient for efficient
+          estimation of point estimation, not for standard error of point
+          estimate. This paper suggests 200 imputations for sample sizes where
+          this reasonable.
+        </p>
 
-        Introduces a two-stage procedure.
-
-        1) Perform a "pilot" MI on 5-20 imputations. Using the fraction of
-        missing information [1 - var(point estimate | complete
-        data)/var(point estimate | M imputations)], calculate how many
-        total imputations are needed.  Specifically, use a "conservative"
-        fraction of missing information, based on CI (so larger M in pilot
-        will lead to more precision in M for follow-up.)
-
-        2) Use the new M to run the imputation.
-
-        Fraction of missing information is NOT % of missing data, however, you
-        can get rough estimates. The rule of thumb I get out of this is that
-
-        For little missing information, use m = 50.
-        For moderate missing information, use m = 200.
-        For large missing information, use m = 400.
-
-
-        The quadratic rule is 200*(fraction of missing information)^2.
-
-        Implemented in Stata via `how_many_imputations`:
-
-        ```
-        webuse mheart1s0, clear
-        mi impute regress bmi attack smokes age female hsgrad, replace add(10)
-        mi estimate: logit attack bmi smokes age female hsgrad
-        how_many_imputations, cv_se(.01)
-        mi impute regress bmi attack smokes age female hsgrad, add(`r(add_M)')
-        mi estimate: logit attack bmi smokes age female hsgrad
-        ```
-
-      </li>    </ul>
+        <p>
+          They also introduce a two-stage procedure to produce an estimate of
+          the total number of imputations needed. It is implemented in Stata and
+          SAS by <a href="https://missingdata.org">von Hippel</a>, and in R via
+          the <a href="https://errickson.net/howManyImputations/"><strong>howManyImputations</strong></a> package.
+      </li>
+    </ul>
 
     <p style="text-align: center">
       <a href="https://errickson.net">Home</a>
     </p>
 
     <script src="index_filter.js"></script>
+    <img src="https://errickson.goatcounter.com/count?p=citations">
   </body>
 </html>

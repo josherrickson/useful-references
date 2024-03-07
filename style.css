@@ -30,6 +30,26 @@ Index search
 }
 
 /**********************************************************************
+Blockquotes
+**********************************************************************/
+
+blockquote {
+  font-family:serif;
+  font-style:italic;
+  padding:1%;
+  margin-inline:0px;
+  border-left:8px solid var(--green) ;
+  line-height:1;
+  position: relative;
+  background:var(--base2);
+}
+
+@media (prefers-color-scheme: dark) {
+    blockquote {
+        background:var(--base02);
+    }
+}
+/**********************************************************************
 List items
 **********************************************************************/
 
