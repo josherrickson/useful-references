@@ -78,28 +78,3 @@ resetButton.addEventListener('click', () => {
   filterList()
   highlightOccurrences()
 })
-
-/***********************************************************************
-Collapse-expand
- ***********************************************************************/
-
-// Get all expandable list items
-const expandableItems = document.querySelectorAll('.citation_entry');
-
-// Iterate over each expandable list item
-expandableItems.forEach(item => {
-  const expandButton = item.querySelector('.expand-button');
-  const expandedContent = item.querySelector('.expanded-content');
-
-  // Add click event listener to the expand button
-  expandButton.addEventListener('click', () => {
-    // Toggle the visibility of expanded content
-    if (expandedContent.style.display === 'none') {
-      expandedContent.style.display = 'inline'; // Show expanded content
-      expandButton.textContent = '[Collapse]'; // Change button text
-    } else {
-      expandedContent.style.display = 'none'; // Hide expanded content
-      expandButton.textContent = '[Expand]'; // Change button text
-    }
-  });
-});
