@@ -16,26 +16,6 @@
     </div>
     <ul class="citation_list">
 
-      <li class="citation_entry">
-        <div class="bib">
-          <p class="title"><a href="https://doi.org/10.1038/s41562-017-0189-z">Redefine
-            statistical significance.</a></p>
-          <p class="title_details">Benjamin et al., 2018</p>
-        </div>
-
-        <p>
-          This paper suggests using &alpha; =.005 instead of &alpha; = .05 for
-          significance in exploratory analysis. They also suggest calling .005
-          &lt; <i>p</i> &lt; .05 as "suggestive".
-        </p>
-
-        <p>
-          The paper uses a Bayesian approach, arguing that &alpha; = .005
-          corresponds to a Bayes Factor of 14 to 26, which translates (according
-          to <a href="https://doi.org/10.1080/01621459.1995.10476572">Kass &
-          Rafferty (1993)</a>) to "substantial" to "strong" evidence.
-          </p>
-      </li>
 
       <li class="citation_entry">
         <div class="bib">
@@ -223,6 +203,58 @@
 
       <li class="citation_entry">
         <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1198/000313006X152649">The
+          Difference Between "Significant" and "Not Significant" is not Itself
+          Statistically Significant</a></p>
+          <p class="title_details">Gelman & Stern, 2006</p>
+        </div>
+
+        <p>
+          This paper argues that p-values are noisy, in the sense that small
+          changes in the data can introduce large changes in p-values - even
+          moving between significance and non-significance.
+        </p>
+
+        <p>
+          <blockquote>
+            ...even large changes in significance levels can correspond to
+            small, nonsignificant changes in the underlying quantities.
+          </blockquote>
+        </p>
+
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1038/nmeth.3288">The
+          Fickle P Value Generates Irreproducible Results</a></p>
+          <p class="title_details"></p>
+        </div>
+
+        <p>
+          A nice summary of the issues around p-values.
+        </p>
+
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1038/s41562-017-0189-z">Redefine
+            statistical significance.</a></p>
+          <p class="title_details">Benjamin et al., 2018</p>
+        </div>
+
+        <p>
+          Contrary to the prior papers, this paper suggests continuing to use
+          p-values, but to use &alpha; =.005 instead of &alpha; = .05 for
+          significance in exploratory analysis. They also suggest calling .005
+          &lt; <i>p</i> &lt; .05 as "suggestive".
+        </p>
+
+        <p>
+          The paper uses a Bayesian approach, arguing that &alpha; = .005
+          corresponds to a Bayes Factor of 14 to 26, which translates (according
+          to <a href="https://doi.org/10.1080/01621459.1995.10476572">Kass &
+          Rafferty (1993)</a>) to "substantial" to "strong" evidence.
+          </p>
+      </li>
+
+      <li class="citation_entry">
+        <div class="bib">
           <p class="title"><a href="https://psycnet.apa.org/doi/10.1037/a0029315">When
           Can Categorical Variables Be Treated as Continuous? A Comparison of
           Robust Continuous and Categorical SEM Estimation Methods Under
@@ -353,6 +385,20 @@
           SAS by <a href="https://missingdata.org">von Hippel</a>, and in R via
           the <a href="https://errickson.net/howManyImputations/"><strong>howManyImputations</strong></a> package.
       </li>
+
+      <li class="citation_entry">
+        <div class="bib">
+          <p class="title"><a href="https://doi.org/10.1257/jel.20191450">Using Synthetic Controls: Feasibility, Data Requirements, and Methodological Aspects</a></p>
+          <p class="title_details">Abadie, 2021</p>
+        </div>
+
+        <p>
+          Practical advice on the usage and implementation of
+          <a href="https://en.wikipedia.org/wiki/Synthetic_control_method">synthetic
+            control method</a>.
+        </p>
+      </li>
+
     </ul>
 
     <p style="text-align: center">
@@ -360,6 +406,15 @@
     </p>
 
     <script src="index_filter.js"></script>
-    <img src="https://errickson.goatcounter.com/count?p=citations" alt="Image tracker for goatcounter">
+    <img src="https://errickson.goatcounter.com/count?p=citations">
   </body>
 </html>
+
+<!--
+     <li class="citation_entry">
+     <div class="bib">
+     <p class="title"><a href=""></a></p>
+     <p class="title_details"></p>
+     </div>
+     </li>
+-->
