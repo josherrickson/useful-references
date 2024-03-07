@@ -12,7 +12,13 @@ body {
     margin: 0 auto;
 }
 
-
+@media only screen and (max-width: 768px) {
+    body {
+        max-width: 95%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 
 
 /**********************************************************************
@@ -55,6 +61,12 @@ List items
 
 ul.citation_list {
     list-style-type: none;
+}
+
+@media only screen and (max-width: 768px) {
+    ul.citation_list {
+        padding-inline-start
+    }
 }
 
 li.citation_entry {
