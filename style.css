@@ -35,6 +35,10 @@ Index search
     }
 }
 
+#filterInput, #resetButton {
+    font-size: 1em;
+}
+
 /**********************************************************************
 Blockquotes
 **********************************************************************/
@@ -79,12 +83,13 @@ li.citation_entry {
     margin-top: 5px;
     margin-bottom: 5px;
     vertical-align: middle;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
     li.citation_entry {
         background-color: var(--base03);
+        box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
     }
 }
 
@@ -99,7 +104,4 @@ li.citation_entry {
 }
 .bib {
     margin-bottom: 10px; /* Add spacing after the .bib div */
-}
-
-p.title {
 }
