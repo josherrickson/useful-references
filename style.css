@@ -1,66 +1,5 @@
 /**********************************************************************
-Overwrite site style
-**********************************************************************/
-
-body {
-    max-width: 80%;
-}
-
-.centered {
-    width: 50%; /* Adjust the width as needed */
-    text-align: center;
-    margin: 0 auto;
-}
-
-@media only screen and (max-width: 768px) {
-    body {
-        max-width: 95%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
-
-/**********************************************************************
-Index search
-**********************************************************************/
-
-.highlight {
-    background-color: yellow;
-}
-
-@media (prefers-color-scheme: dark) {
-    .highlight {
-        color: var(--base02)
-    }
-}
-
-#filterInput, #resetButton {
-    font-size: 1em;
-}
-
-/**********************************************************************
-Blockquotes
-**********************************************************************/
-
-blockquote {
-  font-family:serif;
-  font-style:italic;
-  padding:1%;
-  margin-inline:0px;
-  border-left:8px solid var(--green) ;
-  line-height:1;
-  position: relative;
-  background:var(--base2);
-}
-
-@media (prefers-color-scheme: dark) {
-    blockquote {
-        background:var(--base02);
-    }
-}
-/**********************************************************************
-List items
+Citation entries
 **********************************************************************/
 
 ul.citation_list {
@@ -74,7 +13,6 @@ ul.citation_list {
 }
 
 li.citation_entry {
-    background-color: var(--base3);
     padding-left: 1%;
     padding-right: 1%;
     border-width: 2px;
@@ -83,13 +21,12 @@ li.citation_entry {
     margin-top: 5px;
     margin-bottom: 5px;
     vertical-align: middle;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
     li.citation_entry {
-        background-color: var(--base03);
-        box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+        box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.3);
     }
 }
 
@@ -100,8 +37,14 @@ li.citation_entry {
 }
 .bib p.title_details {
     margin-top: 0; /* Remove spacing above paragraphs except for the first one */
-    color: var(--base0);
+    color: var(--grey1);
 }
 .bib {
     margin-bottom: 10px; /* Add spacing after the .bib div */
+}
+
+@media (prefers-color-scheme: dark) {
+    .bib p.title_details {
+        color: var(--grey2);
+    }
 }
